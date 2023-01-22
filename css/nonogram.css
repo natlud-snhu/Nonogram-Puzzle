@@ -1,0 +1,44 @@
+body {
+    background-color: #050505;
+}
+
+#nonogram-container {
+    background-color: darkslateblue;
+}
+#timer {
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+#results {
+    display: block;
+    text-align: center;
+    font-size: 150%;
+}
+#help-container {
+    display: none;
+    top: 0px;
+    width: 100%;
+}
+#settings-container {
+    display: none;
+    top: 0px;
+    width: 100%;
+}
+.popup-content {
+    display: block;
+    font-size: 1.8em;
+    width: 40%;
+    background-color: #4F6F6F;
+    text-align: center; 
+    margin: 0 auto;
+}
+.exit-button {
+    text-align: right;
+    margin-right: 5%;
+    font-size: 2vw; 
+    cursor: pointer;
+}
+.popup-text {
+    text-align: center;
+}

@@ -1,0 +1,51 @@
+<html>
+<head>
+    <title>Nonogram Puzzle</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link REL="SHORTCUT ICON" HREF="favicon.ico">
+    <link rel="stylesheet" type="text/css" href="css/main.css"/>
+    <link rel="stylesheet" type="text/css" href="css/nonogram.css"/>
+</head>
+<body id="body">
+    <div id="help-container">
+        <div class="popup-content">
+            <div class="unselectable exit-button" onclick="hidePopup('help')">&times</div>
+            <span class="popup-text">Left-click a box to activate it green.<br></span>
+            <span class="popup-text">Right-click a box to disable it red.<br></span>
+            <span class="popup-text">Use the guides on the top and left to determine how many boxes should be activated.<br></span>
+            <span class="popup-text">You win when only the correct boxes are activated.<br></span>
+            <a href="https://www.youtube.com/watch?v=zisu0Qf4TAI&list=PLH_elo2OIwaAYMF8CAfDnlKcVyyB5UITk" target="_blank">
+                <span style="text-align: center;">Video tutorials are available here.</span>
+            </a>
+        </div>
+    </div>
+    <div id="settings-container">
+        <div class="popup-content">
+            <div class="unselectable exit-button" onclick="hidePopup('settings')">&times</div>
+            <span class="popup-text">Grid size: 
+                <select id="gridSize" onchange="changeGridSize()">
+                <option value=”5x5”>5x5</option>
+                <option value=”10x10”>10x10</option>
+                </select>
+            </span><br>
+            <span class="popup-text">Disable timer:
+                <input type="checkbox" id="disableTimer" onchange="disableTimer()">
+            </span><br>
+            <span class="popup-text">Hint roulette:
+                <input type="checkbox" id="hintCheckBox" onchange="toggleHintRoulette()">
+            </span>
+        </div>
+    </div>
+    <div id="nonogram-container" style="display: block; margin: 0 auto; width:400px; height: 500px;">
+        <span id="timer" class="unselectable">00:00</span>
+        <canvas id="gameArea" width="360" height="310" style="display: block; margin: 0 auto;"></canvas>
+        <div id="button-controls">
+            <button type="button" class="unselectable" style="display: block; margin-left: 20%; width:20.75%; float: left;" onclick="intializeGame()">Reset</button>
+            <button type="button" class="unselectable" style="display: block; width:20.75%; float: left;" onclick="displayPopup('help')">Help</button>
+            <button type="button" class="unselectable" style="display: block; width:20.75%;" onclick="displayPopup('settings')">Settings</button>
+        </div>
+        <span id="results"></div>
+    </div>
+<script src="js/nonogram.js"></script>
+</body>
+</html>
